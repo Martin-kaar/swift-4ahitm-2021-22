@@ -33,38 +33,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-MF-DV4">
-                                <rect key="frame" x="184" y="832" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="185.5" y="832" width="43" height="30"/>
+                                <state key="normal" title="Guess"/>
                                 <connections>
                                     <segue destination="dyt-Sd-V9w" kind="show" identifier="Detail" id="d6m-I2-E09"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJl-0Q-rgb">
-                                <rect key="frame" x="184" y="491" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-xV-JRB">
+                                <rect key="frame" x="20" y="431" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJl-0Q-rgb">
+                                <rect key="frame" x="186" y="507" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gr-xV-JRB">
-                                <rect key="frame" x="157" y="421" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="xfO-MF-DV4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="57o-Xt-eaq"/>
                             <constraint firstItem="xfO-MF-DV4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="69v-Jo-BdV"/>
+                            <constraint firstItem="3gr-xV-JRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Evl-NM-MgV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gr-xV-JRB" secondAttribute="trailing" constant="20" id="NzH-VI-Eoq"/>
+                            <constraint firstItem="UJl-0Q-rgb" firstAttribute="top" secondItem="3gr-xV-JRB" secondAttribute="bottom" constant="42" id="cmd-7a-k02"/>
+                            <constraint firstItem="UJl-0Q-rgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDg-Uo-8Oz"/>
+                            <constraint firstItem="3gr-xV-JRB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zVg-rg-WKP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rate mal" id="d6A-xj-nbA"/>
+                    <connections>
+                        <outlet property="guessButton" destination="xfO-MF-DV4" id="5D1-Og-Vxm"/>
+                        <outlet property="inputTextField" destination="3gr-xV-JRB" id="bHe-Y7-7l9"/>
+                        <outlet property="label" destination="3gr-xV-JRB" id="xk8-Zn-drB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="65"/>
+            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
         </scene>
         <!--Detail-->
         <scene sceneID="1GV-nS-wnl">
