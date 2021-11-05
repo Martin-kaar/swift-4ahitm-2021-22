@@ -51,6 +51,11 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print("nein")
+        return false
+    }
 
 
 }
