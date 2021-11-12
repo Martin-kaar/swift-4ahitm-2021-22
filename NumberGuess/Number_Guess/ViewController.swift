@@ -41,7 +41,6 @@ class ViewController: UIViewController {
             model.countOfTries = 0
             model.numberToGuess = Int.random(in: 0..<100)
         }
-        
     }
     
     override func viewDidLoad() {
@@ -53,8 +52,9 @@ class ViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        print("nein")
-        return false
+        let guessedNumber = Int(inputTextField.text!)!
+        return model.compare(guess: guessedNumber) == 0 ? true : false
+        
     }
 
 

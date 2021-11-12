@@ -36,6 +36,7 @@
                                 <rect key="frame" x="185.5" y="832" width="43" height="30"/>
                                 <state key="normal" title="Guess"/>
                                 <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7He-CU-qmm"/>
                                     <segue destination="dyt-Sd-V9w" kind="show" identifier="Detail" id="d6m-I2-E09"/>
                                 </connections>
                             </button>
@@ -43,6 +44,9 @@
                                 <rect key="frame" x="20" y="431" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTextFieldEditingChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YxR-YE-DHf"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJl-0Q-rgb">
                                 <rect key="frame" x="186" y="507" width="42" height="20.5"/>
@@ -67,7 +71,7 @@
                     <connections>
                         <outlet property="guessButton" destination="xfO-MF-DV4" id="5D1-Og-Vxm"/>
                         <outlet property="inputTextField" destination="3gr-xV-JRB" id="bHe-Y7-7l9"/>
-                        <outlet property="label" destination="3gr-xV-JRB" id="xk8-Zn-drB"/>
+                        <outlet property="label" destination="UJl-0Q-rgb" id="Nj9-gf-0jS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
