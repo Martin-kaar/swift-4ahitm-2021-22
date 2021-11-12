@@ -21,9 +21,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         detailTableView.delegate=self
         
         label.text = "Du hast \(model.countOfTries) Versuche gebraucht"
-        // Do any additional setup after loading the view.
-        
-        print(model.listOfTries)
+   
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
