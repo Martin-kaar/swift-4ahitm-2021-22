@@ -14,6 +14,7 @@
 		CE707CD227351BEB007B3433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE707CD127351BEB007B3433 /* Assets.xcassets */; };
 		CE707CD527351BEB007B3433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE707CD327351BEB007B3433 /* LaunchScreen.storyboard */; };
 		CE707CDD27351F0D007B3433 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE707CDC27351F0D007B3433 /* Model.swift */; };
+		CEA791C8273E53290038EED2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA791C7273E53290038EED2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CE707CD427351BEB007B3433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE707CD627351BEB007B3433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE707CDC27351F0D007B3433 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CEA791C7273E53290038EED2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CE707CD127351BEB007B3433 /* Assets.xcassets */,
 				CE707CD327351BEB007B3433 /* LaunchScreen.storyboard */,
 				CE707CD627351BEB007B3433 /* Info.plist */,
+				CEA791C7273E53290038EED2 /* DetailViewController.swift */,
 			);
 			path = Number_Guess;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				CE707CCD27351BEA007B3433 /* ViewController.swift in Sources */,
 				CE707CC927351BEA007B3433 /* AppDelegate.swift in Sources */,
+				CEA791C8273E53290038EED2 /* DetailViewController.swift in Sources */,
 				CE707CCB27351BEA007B3433 /* SceneDelegate.swift in Sources */,
 				CE707CDD27351F0D007B3433 /* Model.swift in Sources */,
 			);

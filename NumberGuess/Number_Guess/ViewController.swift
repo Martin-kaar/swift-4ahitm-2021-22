@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         //TODO: check input for not nil
         let guessedNumber = Int(inputTextField.text!)!
         model.countOfTries += 1
-        
+        model.listOfTries.append(guessedNumber)
         
         
         let text: String?
@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         
         if(generateNewNumber){
             model.countOfTries = 0
-            model.numberToGuess = Int.random(in: 0..<100)
+            model.numberToGuess = Int.random(in: 0..<100);
+            model.listOfTries.removeAll()
         }
     }
     
@@ -54,7 +55,11 @@ class ViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let guessedNumber = Int(inputTextField.text!)!
         return model.compare(guess: guessedNumber) == 0 ? true : false
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailViewController = segue.destination as? DetailViewController
+        detailViewController?.model = model
     }
 
 

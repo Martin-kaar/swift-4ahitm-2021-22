@@ -1,6 +1,7 @@
 class Model {
     var numberToGuess = 0
     var countOfTries = 0
+    var listOfTries: [Int] = [];
     
     func compare(guess guessedNumber:Int!) -> Int! {
         
