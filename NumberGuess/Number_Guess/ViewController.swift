@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var model = Model()
-    var generateNewNumber = false
+    var generatedNewNumber = false
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var guessButton: UIButton!
@@ -37,11 +37,7 @@ class ViewController: UIViewController {
         
         label.text = text
         
-        if(generateNewNumber){
-            model.countOfTries = 0
-            model.numberToGuess = Int.random(in: 0..<100);
-            model.listOfTries.removeAll()
-        }
+
     }
     
     override func viewDidLoad() {
@@ -60,8 +56,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailViewController = segue.destination as? DetailViewController
         detailViewController?.model = model
+        detailViewController?.generatedNewNumber = generatedNewNumber
+        
     }
 
+    override func viewDidAppear(_:Bool){
+            label.text = "Errate die Zahl"
+            inputTextField.text = ""
+        
+    }
 
 }
 

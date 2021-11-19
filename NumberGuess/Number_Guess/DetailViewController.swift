@@ -14,6 +14,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detailTableView: UITableView!
     
+    var generatedNewNumber: Bool!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +48,17 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         cell.addSubview(labelText)
         return cell
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if self.isMovingFromParent {
+            model.countOfTries = 0
+            model.numberToGuess = Int.random(in: 0..<100);
+            model.listOfTries.removeAll()
+            print("Zu erratende Zahl: \(model.numberToGuess)")
+        }
     }
 
 
