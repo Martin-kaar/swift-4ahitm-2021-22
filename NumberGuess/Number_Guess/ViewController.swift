@@ -9,13 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     var model = Model()
-    var generatedNewNumber = false
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var guessButton: UIButton!
     @IBAction func onTextFieldEditingChange(_ sender: UITextField) {
         guessButton.isEnabled = model.isValid(guess: sender.text)
     }
+    
+    @IBAction func newGame(_ sender: Any) {
+        model.reset()
+        print("Zu erratende Zahl: \(model.numberToGuess)")
+    }
+    
+    
+    
     
     @IBAction func button(_ sender: Any) {
         //TODO: check input for not nil
@@ -33,6 +40,7 @@ class ViewController: UIViewController {
             text = "Die Zahl ist zu klein"
         default:
             text = "Congrats richtig erraten du hast \(model.countOfTries) Versuche gebraucht"
+            model.generateNewNumber = true
         }
         
         label.text = text
@@ -50,20 +58,21 @@ class ViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         let guessedNumber = Int(inputTextField.text!)!
-        return model.compare(guess: guessedNumber) == 0 ? true : false
+        return model.compare(guess: guessedNumber)  == 0 || identifier == "tries" ? true : false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailViewController = segue.destination as? DetailViewController
         detailViewController?.model = model
-        detailViewController?.generatedNewNumber = generatedNewNumber
         
     }
 
     override func viewDidAppear(_:Bool){
+        if(model.generateNewNumber){
             label.text = "Errate die Zahl"
             inputTextField.text = ""
-        
+            model.generateNewNumber = false
+        }
     }
 
 }

@@ -2,6 +2,7 @@ class Model {
     var numberToGuess = 0
     var countOfTries = 0
     var listOfTries: [Int] = [];
+    var generateNewNumber: Bool = false
     
     func compare(guess guessedNumber:Int!) -> Int! {
         
@@ -32,6 +33,12 @@ class Model {
             }
         }
         return result
+    }
+    
+    func reset() -> Void {
+        self.countOfTries = 0
+        self.numberToGuess = Int.random(in: 0..<100);
+        self.listOfTries.removeAll()
     }
     
 }

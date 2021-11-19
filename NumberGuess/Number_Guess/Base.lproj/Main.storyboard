@@ -54,14 +54,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39t-u5-eo8">
+                                <rect key="frame" x="169.5" y="696" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FhF-bb-mRU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slr-aV-B8d">
+                                <rect key="frame" x="190" y="153" width="34" height="30"/>
+                                <state key="normal" title="Tries"/>
+                                <connections>
+                                    <segue destination="dyt-Sd-V9w" kind="show" identifier="tries" id="P72-uC-qj7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="xfO-MF-DV4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="57o-Xt-eaq"/>
                             <constraint firstItem="xfO-MF-DV4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="69v-Jo-BdV"/>
+                            <constraint firstItem="3gr-xV-JRB" firstAttribute="top" secondItem="Slr-aV-B8d" secondAttribute="bottom" constant="248" id="COO-DK-wHu"/>
                             <constraint firstItem="3gr-xV-JRB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Evl-NM-MgV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gr-xV-JRB" secondAttribute="trailing" constant="20" id="NzH-VI-Eoq"/>
+                            <constraint firstItem="Slr-aV-B8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O0z-oP-AAM"/>
+                            <constraint firstItem="39t-u5-eo8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuK-yQ-8QO"/>
+                            <constraint firstItem="xfO-MF-DV4" firstAttribute="top" secondItem="39t-u5-eo8" secondAttribute="bottom" constant="106" id="RqC-6d-0at"/>
                             <constraint firstItem="UJl-0Q-rgb" firstAttribute="top" secondItem="3gr-xV-JRB" secondAttribute="bottom" constant="42" id="cmd-7a-k02"/>
                             <constraint firstItem="UJl-0Q-rgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDg-Uo-8Oz"/>
                             <constraint firstItem="3gr-xV-JRB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zVg-rg-WKP"/>
@@ -90,30 +108,19 @@
                                 <rect key="frame" x="20" y="222" width="374" height="452"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2g-16-pXJ">
-                                <rect key="frame" x="20" y="149" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3ai-9Y-Mqh"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="nva-DF-LaD" firstAttribute="trailing" secondItem="h2g-16-pXJ" secondAttribute="trailing" id="ABi-na-Og3"/>
                             <constraint firstItem="nva-DF-LaD" firstAttribute="centerX" secondItem="3Ok-VE-E9m" secondAttribute="centerX" id="NWb-vD-NPt"/>
-                            <constraint firstItem="h2g-16-pXJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3ai-9Y-Mqh" secondAttribute="leading" symbolic="YES" id="VKe-5W-JlF"/>
                             <constraint firstItem="nva-DF-LaD" firstAttribute="centerY" secondItem="3Ok-VE-E9m" secondAttribute="centerY" id="aEN-O8-1Pu"/>
-                            <constraint firstItem="nva-DF-LaD" firstAttribute="top" secondItem="h2g-16-pXJ" secondAttribute="bottom" constant="52" id="aHh-UZ-NjC"/>
                             <constraint firstItem="3ai-9Y-Mqh" firstAttribute="bottom" secondItem="nva-DF-LaD" secondAttribute="bottom" constant="188" id="g41-cm-Bxd"/>
                             <constraint firstItem="nva-DF-LaD" firstAttribute="leading" secondItem="3Ok-VE-E9m" secondAttribute="leadingMargin" id="hHe-Ra-aSc"/>
-                            <constraint firstItem="h2g-16-pXJ" firstAttribute="centerX" secondItem="3Ok-VE-E9m" secondAttribute="centerX" id="mZf-lK-7IR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="Iep-sP-hm8"/>
                     <connections>
                         <outlet property="detailTableView" destination="nva-DF-LaD" id="bNy-5Y-DHo"/>
-                        <outlet property="label" destination="h2g-16-pXJ" id="aeB-m2-h6L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggu-Vj-JhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -121,6 +128,9 @@
             <point key="canvasLocation" x="942.02898550724649" y="64.955357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="d6m-I2-E09"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -11,7 +11,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
 
     var model : Model!
     
-    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var detailTableView: UITableView!
     
     var generatedNewNumber: Bool!
@@ -23,7 +22,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         detailTableView.dataSource=self
         detailTableView.delegate=self
         
-        label.text = "Du hast \(model.countOfTries) Versuche gebraucht"
    
     }
     
@@ -53,10 +51,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        if self.isMovingFromParent {
-            model.countOfTries = 0
-            model.numberToGuess = Int.random(in: 0..<100);
-            model.listOfTries.removeAll()
+        if self.isMovingFromParent && model.generateNewNumber {
+            model.reset()
             print("Zu erratende Zahl: \(model.numberToGuess)")
         }
     }
