@@ -25,11 +25,11 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewController = segue.source as? TableViewController
+        let viewController = segue.destination as? TableViewController
         if let controller = viewController
         {
             print("ok")
-            controller.model = model
+            controller.model = self.model
         }
     }
 

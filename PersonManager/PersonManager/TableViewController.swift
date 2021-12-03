@@ -35,12 +35,12 @@ class TableViewController: UITableViewController{
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let line = model.names[indexPath.row];
         
-        cell.textLabel!.text = line[0];
-        cell.detailTextLabel!.text = line[1];
+        cell.textLabel!.text = line[1];
+        cell.detailTextLabel!.text = line[0];
         
         // Configure the cell...
 
